@@ -30,3 +30,7 @@ INSERT INTO pedidos(data_pedido, id_cliente) VALUES ("2025-06-16",5);
 
 INSERT INTO pedidos(data_pedido, id_cliente) VALUES ("2019-11-29",6);
 INSERT INTO pedidos(data_pedido, id_cliente) VALUES ("2025-02-13",6);
+
+SELECT clientes.nome, pedidos.id_pedido FROM clientes JOIN pedidos WHERE clientes.id_cliente = pedidos.id_cliente;
+SELECT clientes.nome, pedidos.id_pedido, pedidos.data_pedido FROM clientes LEFT JOIN pedidos ON clientes.id_cliente = pedidos.id_cliente;
+SELECT clientes.nome, COUNT(pedidos.id_pedido) AS total_pedidos FROM clientes LEFT JOIN pedidos ON clientes.id_cliente = pedidos.id_cliente GROUP BY clientes.id_cliente;
