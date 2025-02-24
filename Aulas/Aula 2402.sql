@@ -24,3 +24,7 @@ SELECT first_name, LEFT(first_name,3) FROM employees;
 
 -- RIGHT "picotar quem e até onde"
 SELECT first_name, RIGHT(first_name,3) FROM employees;
+
+SELECT hire_date, birth_date FROM employees;
+-- DATE DIFF
+SELECT DATEDIFF(hire_date, birth_date) FROM employees;
