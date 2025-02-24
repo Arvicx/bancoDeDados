@@ -31,3 +31,8 @@ SELECT DATEDIFF(hire_date, birth_date) FROM employees;
 
 SELECT hire_date FROM employees;
 SELECT first_name, DATE_FORMAT(hire_date, "%d / %m / %y") FROM employees;
+
+CREATE TABLE emails(
+	 id INT PRIMARY KEY AUTO_INCREMENT,
+     primario VARCHAR(100) NOT NULL
+);
