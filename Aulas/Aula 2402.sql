@@ -28,3 +28,6 @@ SELECT first_name, RIGHT(first_name,3) FROM employees;
 SELECT hire_date, birth_date FROM employees;
 -- DATE DIFF
 SELECT DATEDIFF(hire_date, birth_date) FROM employees;
+
+SELECT hire_date FROM employees;
+SELECT first_name, DATE_FORMAT(hire_date, "%d / %m / %y") FROM employees;
