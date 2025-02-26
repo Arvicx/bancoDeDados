@@ -42,3 +42,15 @@ CREATE TABLE produtos(
     id_fornecedores INT NOT NULL,
     FOREIGN KEY(id_fornecedores) REFERENCES fornecedores(id)
 );
+
+INSERT INTO clientes (nome, email, telefone, endereco) VALUES ("Arthur Fernandes Rodrigues", "arthur@email.com", "71938288483", "Rua Jatobá 14, Pinheiros");
+INSERT INTO pedidos (data_pedido, total, status_pedido, id_clientes) VALUES ("2020-09-13", 530.30, "Entregue", 1);
+INSERT INTO pagamentos (metodo_pagamento, status_pagamento, valor_pago, id_pedidos) VALUES ("Cartão de Crédito", "Pago", 530.30, 1);
+INSERT INTO fornecedores (nome, contato, endereco) VALUES ("Wildiane da Silva", "61923457654", "Rua Jequiti Lote 30, Pinheiros");
+INSERT INTO produtos (nome_produto, preco, estoque, id_fornecedores) VALUES ("Monitor ACER 28' 260hz", 530.30, 29, 1);
+
+SELECT * FROM clientes;
+SELECT * FROM pedidos;
+SELECT * FROM pagamentos;
+SELECT * FROM fornecedores;
+SELECT * FROM produtos;
